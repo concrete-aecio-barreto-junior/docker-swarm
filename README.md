@@ -105,26 +105,12 @@ $ docker service scale app_api=10
 
 ## Comandos de apoio
 
-- Lista os hosts ativos:
-```
-$ docker-machine ls
-```
-- Exibe as configurações do host informado:
-```
-$ docker-machine env master #
-```
-- Para listar todos os hosts ingressados:
-```
-$ docker node ls
-```
-- Obter endereço ip dos hosts:
-```
-$ docker-machine ip master
-```
-- Listar containers e distribuição entre nodes:
-```
-$ docker stack ps app
-```
+- Lista os hosts ativos: `$ docker-machine ls`
+- Exibe as configurações do host informado: `$ docker-machine env master`
+- Para listar todos os hosts ingressados: `$ docker node ls`
+- Obter endereço ip dos hosts: `$ docker-machine ip master`
+- Listar containers e distribuição entre nodes: `$ docker stack ps app`
+
 ## Links úteis:
 
 Stack service https://docs.docker.com/get-started/part5/
