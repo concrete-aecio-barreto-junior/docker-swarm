@@ -13,10 +13,11 @@ Os serviços são dispostos através de stack's que são grupos de recursos inte
 
 ## Requerimentos:
 
-> **Obs.:** Neste lab foram instanciados três hosts p/ atuarem no swarm.
-
 - Hipervisor (virtualbox)
 - Docker-machine
+
+> **Obs.:** Neste lab foram instanciados três hosts p/ atuarem no swarm.
+
 
 ## Procedimentos
 
