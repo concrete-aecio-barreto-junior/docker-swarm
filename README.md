@@ -9,9 +9,8 @@ Setup a Cluster using Docker Swarm
 
 O **"[Swarm](https://docs.docker.com/engine/swarm/)"** consite em múltiplos de hosts docker dispostos como `managers` e `workers` destinados a compor um cluster de gerenciamento de conainers Docker. Instâncias docker em modo swarm podem cumprir papeis como `manager`, `worker` ou ambos.
 
-`**Workers**` são responsáveis por provisionar instâncias docker conforme definições das stacks.
-
-**Managers** garantem a distribuição equivalente de recursos, containers assim como o load balance no cluster.
+- `Workers` são responsáveis por provisionar instâncias docker conforme definições das stacks.
+- `Managers` garantem a distribuição equivalente de recursos, containers assim como o load balance no cluster.
 
 Durante a criação de um serviço são definidos em stacks os recursos (replicas, storage, definições de rede e publicação de serviços) quais serão assegurados pelo swarm de maneira a garantir escalabilidade e tolerância a falhas. Ou seja, na ocorrência de crash com hosts/containers/serviços os managers se encarregarão de provisionar e/ou distribuir automática e instantaneamente os recursos mínimos definidos entre os demais hosts que compõem o cluster.
 
