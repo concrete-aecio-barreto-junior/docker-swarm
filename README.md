@@ -3,7 +3,7 @@ __[Concrete Solutions](http://www.concretesolutions.com.br) | DevOps - OnBoardin
 
 # **Trello (Card):** Learn the basics about Docker
 
-Setup a Cluster using Docker Swarm (numa infra local com virtualbox)
+Setup a Cluster using Docker Swarm
 
 ## Descrição:
 
@@ -16,7 +16,7 @@ Os serviços são dispostos através de stack's que são grupos de recursos inte
 - Hipervisor (virtualbox)
 - Docker-machine
 
-> **Obs.:** Neste lab foram instanciados três hosts p/ atuarem no swarm.
+###> **Obs.:** Neste lab foram instanciados três hosts p/ atuarem no swarm numa infra local.
 
 ## Procedimentos
 
