@@ -1,0 +1,15 @@
+version: '3'
+services:
+  api:
+    image: concreteaeciobarretojunior/debian-helloworld 
+    ports:
+      - "80:80"
+    
+    deploy:
+      replicas: 4
+      update_config:
+        parallelism: 2
+        delay: 5s
+      
+      restart_policy:
+        condition: on-failure

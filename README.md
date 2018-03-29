@@ -88,20 +88,23 @@ $ docker node promote HOST01 HOST02
 
 #### 6. **Deploy de uma stack de serviços**
 
+Para este deploy foi utilizado o compose com a imagem **[HelloWorld](https://hub.docker.com/r/concreteaeciobarretojunior/debian-helloworld/)** criada durante o OnBoarding (HelloWolrd).
+
 ```
-$ docker stack deploy -c docker-compose-prodswarm.yml app
+$ docker stack deploy -c docker-compose-helloworld.yml hello-world
+
 ```
 
-![XXX](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/XXX.png "XXX")
+![Stack deploy](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/stack-deploy.png "Stack deploy")
 
 
 #### 7. **Teste de escalação horizontal:**
 
 ```
-$ docker service scale app_api=10
+$ docker service scale hello-world_api=10
 ```
 
-![XXX](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/XXX.png "XXX")
+![Stack scale](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/stack-scale.png "Stack scale")
 
 ## Comandos de apoio
 
@@ -110,7 +113,9 @@ $ docker service scale app_api=10
 - Para listar todos os hosts ingressados: `$ docker node ls`
 - Obter endereço ip dos hosts: `$ docker-machine ip master`
 - Listar containers e distribuição entre nodes: `$ docker stack ps app`
+- Remover stack: `$ docker stack rm NAME`
 
 ## Links úteis:
 
 Stack service https://docs.docker.com/get-started/part5/
+Stack commands https://docs.docker.com/engine/reference/commandline/stack_rm/#usage
