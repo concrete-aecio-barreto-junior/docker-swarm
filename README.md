@@ -12,7 +12,7 @@ O **"[Swarm](https://docs.docker.com/engine/swarm/)"** consite em múltiplos de 
 - `Workers` são responsáveis por provisionar instâncias docker conforme definições das stacks.
 - `Managers` garantem a distribuição equivalente de recursos, containers assim como o load balance no cluster.
 
-Durante a criação de um serviço são definidos em stacks os recursos (replicas, storage, definições de rede e publicação de serviços) quais serão assegurados pelo swarm de maneira a garantir escalabilidade e tolerância a falhas. Ou seja, na ocorrência de crash com hosts/containers/serviços os managers se encarregarão de provisionar e/ou distribuir automática e instantaneamente os recursos mínimos definidos entre os demais hosts que compõem o cluster.
+Durante a criação de um serviço são definidos em stacks os recursos (replicas, storage, definições de rede e publicação de serviços) quais serão assegurados pelo swarm de maneira a garantir escalabilidade e tolerância a falhas. Ou seja, na ocorrência de crash com hosts/containers/serviços ou a partir de algum gatilho os managers se encarregarão de provisionar e/ou distribuir automática e instantaneamente os recursos mínimos (conforme definições da stack) entre os demais hosts que compõem o cluster.
 
 Os serviços são dispostos através de stack's que são grupos de recursos inter-relacionados e que compartilham dependências e podem ser escalados e orquestrados juntos pelo swarm.
 
