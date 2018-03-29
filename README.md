@@ -20,7 +20,7 @@ Os serviços são dispostos através de stack's que são grupos de recursos inte
 
 ## Procedimentos
 
-1. Criar o host **"master"**:
+#### 1. Criar o host **"master"**:
 
 ```
 $ docker-machine create -d virtualbox master
@@ -28,7 +28,7 @@ $ docker-machine create -d virtualbox master
 
 ![Create host master](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/create-host-master.png "Create host master")
 
-**2. Iniciar o cluster:**
+#### **2. Iniciar o cluster:**
   * **Exportar variaveis p/ a shell corrente:**
 
   ```
@@ -56,7 +56,7 @@ $ docker-machine create -d virtualbox master
   ![Starting Swarm cluster](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/start-cluster.png "Starting cluster")
 
 
-3. **Criar demais hosts:**
+#### 3. **Criar demais hosts:**
 
 ```
 $ docker-machine create -d virtualbox minion01
@@ -67,7 +67,7 @@ $ docker-machine create -d virtualbox minion02
 ![Create hosts 02](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/create-hosts02.png "create-hosts 02")
 
 
-4. **Ingressar os demais hosts ao cluster:**
+#### 4. **Ingressar os demais hosts ao cluster:**
 
 Será necessário utilizar o token gerado no momento da inicialização do cluster (item 2.).
 
@@ -78,7 +78,7 @@ $ docker swarm join --token SWMTKN-1-057eub6q65v555v1283u708fkp576tu8ms9v8jbw1xz
 
 ![Swarm join](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/swarm-join.png "Swarm Join")
 
-5. **Promover demais hosts como master:**
+#### 5. **Promover demais hosts como master:**
 
 ```
 $ docker node promote HOST01 HOST02
@@ -86,7 +86,7 @@ $ docker node promote HOST01 HOST02
 
 ![Promote node](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/promote-node.png "Promote node")
 
-6. **Deploy de uma stack de serviços**
+#### 6. **Deploy de uma stack de serviços**
 
 ```
 $ docker stack deploy -c docker-compose-prodswarm.yml app
@@ -95,7 +95,7 @@ $ docker stack deploy -c docker-compose-prodswarm.yml app
 ![XXX](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/XXX.png "XXX")
 
 
-7. **Teste de escalação horizontal:**
+#### 7. **Teste de escalação horizontal:**
 
 ```
 $ docker service scale app_api=10
