@@ -95,7 +95,7 @@ $ docker node promote HOST01 HOST02
 
 #### 6. **Deploy de uma stack de serviços**
 
-Para este deploy foi utilizado o compose com a imagem **"[HelloWorld](https://hub.docker.com/r/concreteaeciobarretojunior/debian-helloworld/)"** criada durante o OnBoarding (HelloWolrd).
+Para este deploy foi utilizado um [compose](https://raw.githubusercontent.com/concrete-aecio-barreto-junior/docker-swarm/master/docker-compose-helloworld.yml) com a imagem **"[HelloWorld](https://hub.docker.com/r/concreteaeciobarretojunior/debian-helloworld/)"** criada durante o OnBoarding (HelloWolrd).
 
 ```
 $ docker stack deploy -c docker-compose-helloworld.yml hello-world
