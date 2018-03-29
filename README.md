@@ -7,14 +7,15 @@ Setup a Cluster using Docker Swarm
 
 ## Descrição:
 
-O **"Swarm"** consite em múltiplos de hosts docker insânciados como **"managers"** e **"workers"**. Instâncias docker em modo swarm podem cumprir papeis como manager, worker ou ambos. **Workers** são responsáveis por provisionar instâncias docker conforme definições das stacks. Os **managers** garantem a distribuição equivalente de recursos, containers assim como o load balance no cluster. Durante a criação de um serviço são definidos em stacks os recursos (replicas, storage, definições de rede e publicação de serviços) quais serão assegurados pelo swarm de maneira a garantir escalabilidade e tolerância a falhas. Ou seja, na ocorrência de crash com hosts/containers/serviços os managers se encarregarão de provisionar e/ou distribuir automática e instantaneamente os recursos mínimos definidos entre os demais hosts que compõem o cluster.
+O **"[Swarm](https://docs.docker.com/engine/swarm/)"** consite em múltiplos de hosts docker insânciados como **"managers"** e **"workers"**. Instâncias docker em modo swarm podem cumprir papeis como manager, worker ou ambos. **Workers** são responsáveis por provisionar instâncias docker conforme definições das stacks. Os **managers** garantem a distribuição equivalente de recursos, containers assim como o load balance no cluster. Durante a criação de um serviço são definidos em stacks os recursos (replicas, storage, definições de rede e publicação de serviços) quais serão assegurados pelo swarm de maneira a garantir escalabilidade e tolerância a falhas. Ou seja, na ocorrência de crash com hosts/containers/serviços os managers se encarregarão de provisionar e/ou distribuir automática e instantaneamente os recursos mínimos definidos entre os demais hosts que compõem o cluster.
 
 Os serviços são dispostos através de stack's que são grupos de recursos inter-relacionados e que compartilham dependências e podem ser escalados e  orquestrados juntos pelo swarm.
 
 ## Requerimentos:
 
-- Hipervisor (virtualbox)
-- Docker-machine
+- [Hipervisor (virtualbox)](https://www.virtualbox.org/)
+- [Docker CE](https://www.docker.com/community-edition)
+- [Docker-machine](https://docs.docker.com/machine/)
 
 **Nota:** Neste lab foram instanciados três hosts p/ compor o swarm numa infra local.
 
@@ -117,5 +118,9 @@ $ docker service scale hello-world_api=10
 
 ## Links úteis:
 
+- Docker CE: https://www.docker.com/community-edition
+- virtualbox: https://www.virtualbox.org/
+- Docker Machine: https://docs.docker.com/machine/
+- Docker Swarm: https://docs.docker.com/engine/swarm/
 - Stack service: https://docs.docker.com/get-started/part5/
 - Stack commands: https://docs.docker.com/engine/reference/commandline/stack_rm/#usage
