@@ -16,7 +16,7 @@ Os serviços são dispostos através de stack's que são grupos de recursos inte
 - Hipervisor (virtualbox)
 - Docker-machine
 
-#### **Nota:** Neste lab foram instanciados três hosts p/ atuarem no swarm numa infra local.
+**Nota:** Neste lab foram instanciados três hosts p/ atuarem no swarm numa infra local.
 
 ## Procedimentos
 
@@ -28,7 +28,7 @@ $ docker-machine create -d virtualbox master
 
 ![Create host master](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/create-host-master.png "Create host master")
 
-2. Iniciar o cluster
+2. Iniciar o cluster:
   * Exportar variaveis p/ a shell corrente:
 
   ```
@@ -45,16 +45,18 @@ $ docker-machine create -d virtualbox master
 
   ![SSH master host](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/ssh-master.png "SSH master host")
 
-  * Iniciando o cluster
+  * Iniciando o cluster:
 
   ```
   $ docker swarm init --advertise-addr eth1
   ```
+  **Nota:** Importante tomar nota do token gerado para posteriormente ingressar demais hosts ao cluster.
+
 
   ![Starting Swarm cluster](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/start-cluster.png "Starting cluster")
 
 
-3. Criar demais hosts
+3. Criar demais hosts:
 
 ```
 $ docker-machine create -d virtualbox minion01
@@ -65,7 +67,9 @@ $ docker-machine create -d virtualbox minion02
 ![Create hosts 02](https://github.com/concrete-aecio-barreto-junior/docker-swarm/blob/master/images/create-hosts02.png "create-hosts 02")
 
 
-4. Ingressar os demais hosts ao cluster
+4. Ingressar os demais hosts ao cluster:
+
+Será necessário utilizar o token gerado no momento da inicialização do cluster.
 
 ```
 $ docker-machine ssh HOST
