@@ -88,7 +88,7 @@ $ docker node promote HOST01 HOST02
 
 #### 6. **Deploy de uma stack de serviços**
 
-Para este deploy foi utilizado o compose com a imagem **[HelloWorld](https://hub.docker.com/r/concreteaeciobarretojunior/debian-helloworld/)** criada durante o OnBoarding (HelloWolrd).
+Para este deploy foi utilizado o compose com a imagem **"[HelloWorld](https://hub.docker.com/r/concreteaeciobarretojunior/debian-helloworld/)"** criada durante o OnBoarding (HelloWolrd).
 
 ```
 $ docker stack deploy -c docker-compose-helloworld.yml hello-world
@@ -117,5 +117,5 @@ $ docker service scale hello-world_api=10
 
 ## Links úteis:
 
-Stack service https://docs.docker.com/get-started/part5/
-Stack commands https://docs.docker.com/engine/reference/commandline/stack_rm/#usage
+- Stack service: https://docs.docker.com/get-started/part5/
+- Stack commands: https://docs.docker.com/engine/reference/commandline/stack_rm/#usage
